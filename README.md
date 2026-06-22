@@ -1,5 +1,8 @@
 # audioBlade
 
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](./README.md)
+[![简体中文](https://img.shields.io/badge/lang-简体中文-red.svg)](./README.zh-CN.md)
+
 audioBlade is a planned Windows + macOS desktop audio routing application for DAW-independent, persistent system audio routing with virtual endpoint support.
 
 The repository is currently in Phase 0: foundation work.
