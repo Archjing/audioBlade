@@ -61,10 +61,11 @@ Those checks must be recorded later as `not-run`, `pass`, or `fail` with host OS
 
 ## Project Documents
 
-- `AGENTS.md`: project instructions and architecture rules.
-- `docs/TECHNICAL_PLAN.md`: technical plan and rationale ([Simplified Chinese](./docs/cn/技术方案.md)).
-- `docs/DEVELOPMENT_GUIDELINES.md`: engineering rules.
-- `docs/DEVELOPMENT_PROCESS.md`: toolchain ownership.
-- `docs/Plan/`: planning documents.
-- `docs/Harness/`: Harness workflow and team charter.
-- `docs/adr/`: architecture decisions.
+[![Agents](https://img.shields.io/badge/docs-AGENTS-2f6fbb.svg)](./AGENTS.md)
+[![Technical Plan](https://img.shields.io/badge/docs-Technical%20Plan-2f6fbb.svg)](./docs/TECHNICAL_PLAN.md)
+[![Technical Plan CN](https://img.shields.io/badge/docs-%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88-red.svg)](./docs/cn/技术方案.md)
+[![Guidelines](https://img.shields.io/badge/docs-Guidelines-2f6fbb.svg)](./docs/DEVELOPMENT_GUIDELINES.md)
+[![Process](https://img.shields.io/badge/docs-Process-2f6fbb.svg)](./docs/DEVELOPMENT_PROCESS.md)
+[![Plans](https://img.shields.io/badge/docs-Plans-2f6fbb.svg)](./docs/Plan/)
+[![Harness](https://img.shields.io/badge/docs-Harness-2f6fbb.svg)](./docs/Harness/)
+[![ADR](https://img.shields.io/badge/docs-ADR-2f6fbb.svg)](./docs/adr/)
