@@ -12,13 +12,13 @@ audioBlade is a persistent desktop audio router for Windows and macOS.
 
 The product must provide:
 
-- Persistent routing after a DAW or editor is closed
+- Persistent system-level routing without requiring a DAW
 - Routing between virtual audio endpoints and physical audio devices
 - Saved profiles that can restore routes after restart or device reconnect
 - A background audio engine independent of the GUI
 - A UI for editing routes, gains, mute state, and profiles
 
-The product must not depend on Studio One, a DAW session, or a foreground-only process to keep routing alive.
+The product must not depend on any DAW, editor, or foreground-only process to keep routing alive.
 
 ## Architecture Rules
 

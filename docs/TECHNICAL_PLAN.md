@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build a Windows + macOS desktop audio routing app with TuneBlade-like persistence: audio routing keeps working after a DAW such as Studio One is closed.
+Build a Windows + macOS desktop audio routing app with TuneBlade-like persistence: system-level audio routing that works without running a DAW such as Studio One or Audition.
 
 The product should let users route audio between:
 
@@ -14,7 +14,7 @@ The product should let users route audio between:
 
 ## Core Product Requirement
 
-Studio One can act as an audio patch bay only while it is running. To keep routing alive after it exits, audioBlade needs its own persistent audio graph.
+A DAW can act as an audio patch bay only while it is running. To keep routing alive without keeping a DAW open, audioBlade needs its own persistent audio graph.
 
 That means the minimum architecture is:
 
@@ -443,7 +443,7 @@ Network streaming should not be the first milestone unless AirPlay is the primar
 
 ## MVP Definition
 
-MVP should prove the product solves the Studio One replacement use case.
+MVP should prove the product provides a DAW-independent audio routing solution.
 
 MVP capabilities:
 
