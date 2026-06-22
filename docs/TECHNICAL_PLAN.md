@@ -1,5 +1,7 @@
 # audioBlade Technical Plan
 
+[English](./TECHNICAL_PLAN.md) | [简体中文](./cn/技术方案.md)
+
 ## Goal
 
 Build a Windows + macOS desktop audio routing app with TuneBlade-like persistence: system-level audio routing that works without running a DAW such as Studio One or Audition.

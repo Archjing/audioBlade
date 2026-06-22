@@ -62,7 +62,7 @@ Those checks must be recorded later as `not-run`, `pass`, or `fail` with host OS
 ## Project Documents
 
 - `AGENTS.md`: project instructions and architecture rules.
-- `docs/TECHNICAL_PLAN.md`: technical rationale.
+- `docs/TECHNICAL_PLAN.md`: technical plan and rationale ([Simplified Chinese](./docs/cn/技术方案.md)).
 - `docs/DEVELOPMENT_GUIDELINES.md`: engineering rules.
 - `docs/DEVELOPMENT_PROCESS.md`: toolchain ownership.
 - `docs/Plan/`: planning documents.
