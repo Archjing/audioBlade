@@ -80,10 +80,10 @@ Date: 2026-07-10
 
 Tasks:
 
-- [ ] List the canonical Week 3 verification commands.
-- [ ] Record the optional schema validation path if a validation tool is introduced later.
-- [ ] Define output summary expectations and `not_run` classification rules for schema-related checks.
-- [ ] Confirm that schema validation is distinct from route execution.
+- [x] List the canonical Week 3 verification commands.
+- [x] Record the optional schema validation path if a validation tool is introduced later.
+- [x] Define output summary expectations and `not_run` classification rules for schema-related checks.
+- [x] Confirm that schema validation is distinct from route execution.
 
 Acceptance criteria:
 
