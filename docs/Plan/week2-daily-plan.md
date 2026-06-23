@@ -80,10 +80,10 @@ Date: 2026-07-03
 
 Tasks:
 
-- [ ] Plan the first example diagnostics output.
-- [ ] Define the minimum evidence fields to save: OS, audio interface, default input, and default output.
-- [ ] Plan the evidence drop location under `docs/evidence/`.
-- [ ] Record that platform-specific fields may be placed in an extension area while the minimal cross-platform field set stays stable.
+- [x] Plan the first example diagnostics output.
+- [x] Define the minimum evidence fields to save: OS, audio interface, default input, and default output.
+- [x] Plan the evidence drop location under `docs/evidence/`.
+- [x] Record that platform-specific fields may be placed in an extension area while the minimal cross-platform field set stays stable.
 
 Acceptance criteria:
 
