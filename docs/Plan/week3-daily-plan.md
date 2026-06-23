@@ -46,10 +46,10 @@ Date: 2026-07-08
 
 Tasks:
 
-- [ ] Define the minimal JSON representations for `AudioNode`, `Port`, `Route`, and `Profile`.
-- [ ] Plan how one stereo route is represented.
-- [ ] Plan fields for source, destination, gain, mute, and `sampleRatePolicy`.
-- [ ] Reserve fields for stable device IDs and human-readable fallback matching.
+- [x] Define the minimal JSON representations for `AudioNode`, `Port`, `Route`, and `Profile`.
+- [x] Plan how one stereo route is represented.
+- [x] Plan fields for source, destination, gain, mute, and `sampleRatePolicy`.
+- [x] Reserve fields for stable device IDs and human-readable fallback matching.
 
 Acceptance criteria:
 

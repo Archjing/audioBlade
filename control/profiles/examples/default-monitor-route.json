@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "0.1.0",
+  "profileId": "default-monitor-route",
+  "name": "Default Monitor Route",
+  "description": "Example v0 profile for one future stereo route from a virtual input to a physical output. This file is a serializable model only.",
+  "createdBy": "audioBlade Phase 0",
+  "nodes": [
+    {
+      "nodeId": "virtual-input-main",
+      "kind": "virtual_device",
+      "displayName": "audioBlade Virtual Input",
+      "direction": "input",
+      "match": {
+        "stableId": "future-virtual-input-main",
+        "backendType": "future-virtual-driver",
+        "displayName": "audioBlade Virtual Input",
+        "direction": "input",
+        "fallback": {
+          "nameContains": "audioBlade Virtual Input",
+          "minimumInputChannels": 2
+        }
+      },
+      "ports": [
+        {
+          "portId": "virtual-input-main-left",
+          "direction": "input",
+          "channelIndex": 0,
+          "label": "Left"
+        },
+        {
+          "portId": "virtual-input-main-right",
+          "direction": "input",
+          "channelIndex": 1,
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "nodeId": "physical-output-main",
+      "kind": "physical_device",
+      "displayName": "Primary Physical Output",
+      "direction": "output",
+      "match": {
+        "backendType": "Windows Audio",
+        "displayName": "Primary Physical Output",
+        "direction": "output",
+        "fallback": {
+          "minimumOutputChannels": 2
+        }
+      },
+      "ports": [
+        {
+          "portId": "physical-output-main-left",
+          "direction": "output",
+          "channelIndex": 0,
+          "label": "Left"
+        },
+        {
+          "portId": "physical-output-main-right",
+          "direction": "output",
+          "channelIndex": 1,
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "routeId": "monitor-stereo-main",
+      "enabled": true,
+      "source": {
+        "nodeId": "virtual-input-main",
+        "portIds": [
+          "virtual-input-main-left",
+          "virtual-input-main-right"
+        ]
+      },
+      "destination": {
+        "nodeId": "physical-output-main",
+        "portIds": [
+          "physical-output-main-left",
+          "physical-output-main-right"
+        ]
+      },
+      "gainDb": 0,
+      "muted": false,
+      "sampleRatePolicy": "follow_destination"
+    }
+  ]
+}

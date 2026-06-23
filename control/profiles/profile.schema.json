@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://audioblade.dev/schemas/profile.schema.json",
+  "title": "audioBlade Profile",
+  "description": "Serializable audioBlade profile model for Phase 0. This schema describes future routing intent only; it does not execute audio routes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "profileId", "name", "nodes", "routes"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "profileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/audioNode"
+      }
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/route"
+      }
+    }
+  },
+  "$defs": {
+    "audioNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodeId", "kind", "displayName", "direction", "match", "ports"],
+      "properties": {
+        "nodeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["physical_device", "virtual_device", "app_stream", "network_sink"]
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["input", "output", "duplex", "unknown"]
+        },
+        "match": {
+          "$ref": "#/$defs/deviceMatch"
+        },
+        "ports": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/port"
+          }
+        }
+      }
+    },
+    "deviceMatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backendType", "displayName"],
+      "properties": {
+        "stableId": {
+          "type": "string",
+          "description": "Platform-provided stable identifier when available."
+        },
+        "backendType": {
+          "type": "string",
+          "description": "Audio backend or API name from diagnostics output."
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["input", "output", "duplex", "unknown"]
+        },
+        "fallback": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "nameContains": {
+              "type": "string"
+            },
+            "minimumInputChannels": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minimumOutputChannels": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "port": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["portId", "direction", "channelIndex", "label"],
+      "properties": {
+        "portId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["input", "output"]
+        },
+        "channelIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["routeId", "enabled", "source", "destination", "gainDb", "muted", "sampleRatePolicy"],
+      "properties": {
+        "routeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/$defs/endpoint"
+        },
+        "destination": {
+          "$ref": "#/$defs/endpoint"
+        },
+        "gainDb": {
+          "type": "number",
+          "minimum": -96,
+          "maximum": 24
+        },
+        "muted": {
+          "type": "boolean"
+        },
+        "sampleRatePolicy": {
+          "type": "string",
+          "enum": ["follow_source", "follow_destination", "fixed", "unsupported"]
+        },
+        "fixedSampleRate": {
+          "type": "number",
+          "enum": [44100, 48000, 88200, 96000, 176400, 192000]
+        }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodeId", "portIds"],
+      "properties": {
+        "nodeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "portIds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
