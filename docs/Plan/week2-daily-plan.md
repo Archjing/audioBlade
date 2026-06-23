@@ -97,10 +97,10 @@ Date: 2026-07-04
 
 Tasks:
 
-- [ ] Review the Week 2 acceptance criteria.
-- [ ] Confirm the week closes on enumeration visibility, input/output distinction, no Python dependency, and no real-time callback misuse.
-- [ ] Record which verification items require a real Windows environment.
-- [ ] Prepare the Week 3 entry point: Profile schema and diagnostics output compatibility.
+- [x] Review the Week 2 acceptance criteria.
+- [x] Confirm the week closes on enumeration visibility, input/output distinction, no Python dependency, and no real-time callback misuse.
+- [x] Record which verification items require a real Windows environment.
+- [x] Prepare the Week 3 entry point: Profile schema and diagnostics output compatibility.
 
 Acceptance criteria:
 

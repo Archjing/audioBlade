@@ -103,3 +103,44 @@ Not run:
 ### Week Status
 
 Phase 0 Week 1 is now closed as `pass` for the build-baseline goal. The next execution step is Week 2 device enumeration work.
+
+## Phase 0 Week 2 Session
+
+### Goal
+
+Execute Week 2 device-enumeration work, update the daily-plan state per day, and write durable evidence artifacts.
+
+### Changes Made
+
+- Added `extern/JUCE` as a pinned source checkout.
+- Added `engine/devices/README.md`.
+- Added `engine/devices/AudioDeviceInfo.h`.
+- Added `engine/devices/DeviceEnumerator.h`.
+- Added `engine/devices/DeviceEnumerator.cpp`.
+- Updated `apps/desktop/main.cpp` with a `--diagnose-devices` path and device-summary UI text path.
+- Added `docs/evidence/README.md`.
+- Added `docs/evidence/week2-device-enumeration-sample.md`.
+- Added `docs/reports/2026-06-23-phase0-week2-closeout.md`.
+- Updated `docs/Plan/week2-daily-plan.md` checkboxes through Day 5.
+
+### Verification
+
+Passed:
+
+- JUCE source checkout pinned at `extern/JUCE`.
+- Enumeration model and source files exist.
+- Evidence directory and Week 2 sample template exist.
+- Enumeration code remains outside any real-time callback path.
+
+Failed:
+
+- Real JUCE desktop configure/build in the current WSL host. Configure reports missing `alsa` and `libcurl` development dependencies, then does not complete a usable local JUCE app path.
+
+Not run:
+
+- Real `--diagnose-devices` runtime output from a supported host environment.
+- Real Windows device-enumeration acceptance.
+
+### Week Status
+
+Phase 0 Week 2 is closed as `partial`: repository deliverables for enumeration structure and diagnostics planning are present, but runtime evidence remains pending on a supported host environment.
