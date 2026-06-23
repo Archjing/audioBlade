@@ -24,7 +24,7 @@ const char* toString(const AudioDeviceDirection direction)
 namespace
 {
 
-AudioDeviceDirection inferDirection(const juce::AudioIODeviceType& type, const juce::String& deviceName)
+AudioDeviceDirection inferDirection(juce::AudioIODeviceType& type, const juce::String& deviceName)
 {
     const auto hasInputs = type.hasSeparateInputsAndOutputs()
                                ? type.getDeviceNames(true).contains(deviceName)
@@ -43,7 +43,7 @@ AudioDeviceDirection inferDirection(const juce::AudioIODeviceType& type, const j
 }
 
 AudioDeviceInfo makeInfo(
-    const juce::AudioIODeviceType& type,
+    juce::AudioIODeviceType& type,
     const juce::String& deviceName,
     const juce::String& defaultInputName,
     const juce::String& defaultOutputName)
@@ -87,7 +87,7 @@ std::vector<AudioDeviceInfo> DeviceEnumerator::enumerateDevices() const
     std::vector<AudioDeviceInfo> devices;
 
     juce::AudioDeviceManager manager;
-    manager.createAudioDeviceTypes(manager.getAvailableDeviceTypes());
+    manager.createAudioDeviceTypes();
 
     const auto currentSetup = manager.getAudioDeviceSetup();
     const auto defaultInputName = currentSetup.inputDeviceName;
