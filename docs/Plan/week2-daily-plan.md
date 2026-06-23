@@ -46,10 +46,10 @@ Date: 2026-07-01
 
 Tasks:
 
-- [ ] Plan the `engine/devices/AudioDeviceInfo` data structure.
-- [ ] Plan the initial `engine/devices/DeviceEnumerator` abstraction.
-- [ ] Define which fields are required now and which are diagnostics extensions.
-- [ ] Reserve room for future stable device IDs without expanding into Profile schema decisions that belong to Week 3.
+- [x] Plan the `engine/devices/AudioDeviceInfo` data structure.
+- [x] Plan the initial `engine/devices/DeviceEnumerator` abstraction.
+- [x] Define which fields are required now and which are diagnostics extensions.
+- [x] Reserve room for future stable device IDs without expanding into Profile schema decisions that belong to Week 3.
 
 Acceptance criteria:
 
