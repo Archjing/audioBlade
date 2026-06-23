@@ -63,10 +63,10 @@ Date: 2026-07-09
 
 Tasks:
 
-- [ ] Align Week 3 schema planning with Week 2 device enumeration output.
-- [ ] Describe how diagnostics fields can reference future Profile device entries.
-- [ ] Plan the evidence items needed for `docs/Plan/phase0-verification-report.md`.
-- [ ] Ensure diagnostics compatibility is recorded without claiming real routing behavior.
+- [x] Align Week 3 schema planning with Week 2 device enumeration output.
+- [x] Describe how diagnostics fields can reference future Profile device entries.
+- [x] Plan the evidence items needed for `docs/Plan/phase0-verification-report.md`.
+- [x] Ensure diagnostics compatibility is recorded without claiming real routing behavior.
 
 Acceptance criteria:
 
