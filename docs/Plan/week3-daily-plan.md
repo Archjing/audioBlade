@@ -97,10 +97,10 @@ Date: 2026-07-11
 
 Tasks:
 
-- [ ] Review the Week 3 acceptance criteria.
-- [ ] Confirm the schema can represent future virtual-input-to-physical-output and physical-input-to-virtual-output routes as serializable models only.
-- [ ] Record the Phase 0 risk list for schema creep.
-- [ ] Prepare the Week 4 entry point: integration, verification, and next-phase recommendation.
+- [x] Review the Week 3 acceptance criteria.
+- [x] Confirm the schema can represent future virtual-input-to-physical-output and physical-input-to-virtual-output routes as serializable models only.
+- [x] Record the Phase 0 risk list for schema creep.
+- [x] Prepare the Week 4 entry point: integration, verification, and next-phase recommendation.
 
 Acceptance criteria:
 
