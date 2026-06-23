@@ -2,6 +2,8 @@
 
 #include <juce_audio_devices/juce_audio_devices.h>
 
+#include <set>
+
 namespace audio_blade::devices
 {
 const char* toString(const AudioDeviceDirection direction)
@@ -49,17 +51,19 @@ AudioDeviceInfo makeInfo(
     const juce::String& defaultOutputName)
 {
     AudioDeviceInfo info;
-    info.name = deviceName.toStdString();
-    info.identifier = (type.getTypeName() + "::" + deviceName).toStdString();
-    info.direction = inferDirection(type, deviceName);
-    info.isDefaultInput = defaultInputName == deviceName;
-    info.isDefaultOutput = defaultOutputName == deviceName;
+    const auto safeName = deviceName.isNotEmpty() ? deviceName : juce::String("[unnamed-device]");
+    info.backendType = type.getTypeName();
+    info.name = safeName;
+    info.identifier = type.getTypeName() + "::" + deviceName;
+    info.direction = inferDirection(type, safeName);
+    info.isDefaultInput = defaultInputName == safeName;
+    info.isDefaultOutput = defaultOutputName == safeName;
 
     std::unique_ptr<juce::AudioIODevice> probeDevice;
     if (type.hasSeparateInputsAndOutputs())
-        probeDevice.reset(type.createDevice(deviceName, deviceName));
+        probeDevice.reset(type.createDevice(safeName, safeName));
     else
-        probeDevice.reset(type.createDevice(deviceName, {}));
+        probeDevice.reset(type.createDevice(safeName, {}));
 
     if (probeDevice != nullptr)
     {
@@ -87,38 +91,45 @@ std::vector<AudioDeviceInfo> DeviceEnumerator::enumerateDevices() const
     std::vector<AudioDeviceInfo> devices;
 
     juce::AudioDeviceManager manager;
-    manager.createAudioDeviceTypes();
+    juce::OwnedArray<juce::AudioIODeviceType> deviceTypes;
+    manager.createAudioDeviceTypes(deviceTypes);
 
     const auto currentSetup = manager.getAudioDeviceSetup();
     const auto defaultInputName = currentSetup.inputDeviceName;
     const auto defaultOutputName = currentSetup.outputDeviceName;
 
-    for (auto* type : manager.getAvailableDeviceTypes())
+    for (auto* type : deviceTypes)
     {
         if (type == nullptr)
             continue;
 
         type->scanForDevices();
+        std::set<juce::String> seenIdentifiers;
 
         if (type->hasSeparateInputsAndOutputs())
         {
             for (const auto& inputName : type->getDeviceNames(true))
-                devices.push_back(makeInfo(*type, inputName, defaultInputName, defaultOutputName));
+            {
+                const auto key = type->getTypeName() + "::" + inputName;
+                if (seenIdentifiers.insert(key).second)
+                    devices.push_back(makeInfo(*type, inputName, defaultInputName, defaultOutputName));
+            }
 
             for (const auto& outputName : type->getDeviceNames(false))
             {
-                const auto alreadyIncluded = std::any_of(
-                    devices.begin(),
-                    devices.end(),
-                    [&](const auto& existing) { return existing.name == outputName.toStdString(); });
-                if (!alreadyIncluded)
+                const auto key = type->getTypeName() + "::" + outputName;
+                if (seenIdentifiers.insert(key).second)
                     devices.push_back(makeInfo(*type, outputName, defaultInputName, defaultOutputName));
             }
         }
         else
         {
             for (const auto& deviceName : type->getDeviceNames())
-                devices.push_back(makeInfo(*type, deviceName, defaultInputName, defaultOutputName));
+            {
+                const auto key = type->getTypeName() + "::" + deviceName;
+                if (seenIdentifiers.insert(key).second)
+                    devices.push_back(makeInfo(*type, deviceName, defaultInputName, defaultOutputName));
+            }
         }
     }
 
