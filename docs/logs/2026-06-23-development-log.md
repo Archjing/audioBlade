@@ -68,3 +68,38 @@ Day 1 intentionally uses a buildable placeholder target for `audioBladeDesktop` 
 ## Next Step
 
 Day 2 should expand the repository skeleton around concrete CMake source boundaries and decide whether to add JUCE as a submodule/source checkout before implementing the real desktop target.
+
+## Follow-up Session
+
+### Goal
+
+Close Phase 0 Week 1, add the remaining daily-plan documents for Weeks 2 to 4, and add a local Harness wrapper so the external runner is no longer referenced only by hard-coded invocation commands.
+
+### Changes Made
+
+- Added `docs/Plan/week2-daily-plan.md`.
+- Added `docs/Plan/week3-daily-plan.md`.
+- Added `docs/Plan/week4-daily-plan.md`.
+- Added `tools/harness.sh` as the repo-local entry point for the external Harness runner.
+- Updated `.gitignore` to ignore `.harness.env`.
+- Added `knowledge/finetune-macos-audio-routing-notes.md`.
+- Added `docs/reports/2026-06-23-phase0-week1-closeout.md`.
+
+### Verification
+
+Passed:
+
+- `tools/harness.sh --help`
+- `cmake -S . -B build`
+- `cmake --build build`
+- `cmake --preset dev`
+- `cmake --build --preset dev`
+
+Not run:
+
+- Real JUCE app launch because `extern/JUCE` is absent.
+- Windows device enumeration acceptance because this environment is WSL.
+
+### Week Status
+
+Phase 0 Week 1 is now closed as `pass` for the build-baseline goal. The next execution step is Week 2 device enumeration work.
