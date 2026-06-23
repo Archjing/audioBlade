@@ -36,11 +36,11 @@ Date: 2026-06-23
 
 Tasks:
 
-- Confirm JUCE acquisition method.
-- Define CMake ownership, target naming, and application metadata.
-- Create the first ADR for MVP stack and boundaries.
-- Add a minimal configure-only CMake skeleton that fixes project metadata and target names.
-- Add developer build notes.
+- [x] Confirm JUCE acquisition method.
+- [x] Define CMake ownership, target naming, and application metadata.
+- [x] Create the first ADR for MVP stack and boundaries.
+- [x] Add a minimal configure-only CMake skeleton that fixes project metadata and target names.
+- [x] Add developer build notes.
 
 Acceptance criteria:
 
@@ -56,9 +56,9 @@ Date: 2026-06-24
 
 Tasks:
 
-- Expand source directories only where concrete files are needed.
-- Add `apps/desktop/` CMake entry and minimal source stub if JUCE is available.
-- Keep `engine/`, `control/`, `platform/`, and `tools/` aligned with the architecture split.
+- [x] Expand source directories only where concrete files are needed.
+- [x] Add `apps/desktop/` CMake entry and minimal source stub if JUCE is available.
+- [x] Keep `engine/`, `control/`, `platform/`, and `tools/` aligned with the architecture split.
 
 Acceptance criteria:
 
@@ -71,9 +71,9 @@ Date: 2026-06-25
 
 Tasks:
 
-- Add a minimal JUCE app entry point.
-- Wire app metadata into CMake/JUCE.
-- Keep audio device enumeration outside this day unless it is a trivial non-blocking diagnostic.
+- [x] Add a minimal JUCE app entry point.
+- [x] Wire app metadata into CMake/JUCE.
+- [x] Keep audio device enumeration outside this day unless it is a trivial non-blocking diagnostic.
 
 Acceptance criteria:
 
@@ -86,9 +86,9 @@ Date: 2026-06-26
 
 Tasks:
 
-- Review and complete ADR 0001.
-- Record consequences, non-goals, and deferrals.
-- Confirm the ADR matches `docs/DEVELOPMENT_PROCESS.md` and `docs/DEVELOPMENT_GUIDELINES.md`.
+- [x] Review and complete ADR 0001.
+- [x] Record consequences, non-goals, and deferrals.
+- [x] Confirm the ADR matches `docs/DEVELOPMENT_PROCESS.md` and `docs/DEVELOPMENT_GUIDELINES.md`.
 
 Acceptance criteria:
 
@@ -102,9 +102,9 @@ Date: 2026-06-27
 
 Tasks:
 
-- Ensure root README or developer docs include configure/build commands.
-- Add notes on WSL/Linux limitations.
-- Document how to provide JUCE sources.
+- [x] Ensure root README or developer docs include configure/build commands.
+- [x] Add notes on WSL/Linux limitations.
+- [x] Document how to provide JUCE sources.
 
 Acceptance criteria:
 
@@ -117,10 +117,10 @@ Date: 2026-06-28
 
 Tasks:
 
-- Run CMake configure.
-- Run build if a concrete build target exists.
-- Check ADR and target naming.
-- Record blockers as `fail` or `not-run`.
+- [x] Run CMake configure.
+- [x] Run build if a concrete build target exists.
+- [x] Check ADR and target naming.
+- [x] Record blockers as `fail` or `not-run`.
 
 Acceptance criteria:
 
@@ -133,9 +133,9 @@ Date: 2026-06-29
 
 Tasks:
 
-- Write Week 1 status.
-- List completed deliverables and not-run checks.
-- Confirm Week 2 entry point: device enumeration.
+- [x] Write Week 1 status.
+- [x] List completed deliverables and not-run checks.
+- [x] Confirm Week 2 entry point: device enumeration.
 
 Acceptance criteria:
 

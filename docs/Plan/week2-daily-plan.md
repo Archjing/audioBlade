@@ -29,10 +29,10 @@ Date: 2026-06-30
 
 Tasks:
 
-- Confirm the Week 2 scope against `docs/Plan/phase0-foundation-plan.md`.
-- Restate the Week 2 deliverables for device enumeration.
-- Define the minimal enumeration model and non-goals for this week.
-- Record that this week does not include real routing, virtual drivers, ASIO, or AirPlay.
+- [x] Confirm the Week 2 scope against `docs/Plan/phase0-foundation-plan.md`.
+- [x] Restate the Week 2 deliverables for device enumeration.
+- [x] Define the minimal enumeration model and non-goals for this week.
+- [x] Record that this week does not include real routing, virtual drivers, ASIO, or AirPlay.
 
 Acceptance criteria:
 
@@ -46,10 +46,10 @@ Date: 2026-07-01
 
 Tasks:
 
-- Plan the `engine/devices/AudioDeviceInfo` data structure.
-- Plan the initial `engine/devices/DeviceEnumerator` abstraction.
-- Define which fields are required now and which are diagnostics extensions.
-- Reserve room for future stable device IDs without expanding into Profile schema decisions that belong to Week 3.
+- [ ] Plan the `engine/devices/AudioDeviceInfo` data structure.
+- [ ] Plan the initial `engine/devices/DeviceEnumerator` abstraction.
+- [ ] Define which fields are required now and which are diagnostics extensions.
+- [ ] Reserve room for future stable device IDs without expanding into Profile schema decisions that belong to Week 3.
 
 Acceptance criteria:
 
@@ -63,10 +63,10 @@ Date: 2026-07-02
 
 Tasks:
 
-- Plan how JUCE `AudioDeviceManager` is used for enumeration.
-- Decide whether the first visible output is shown in a minimal UI surface, logs, or both.
-- Ensure enumeration work is described as control-path work rather than callback work.
-- Document the distinction between input, output, duplex, and unknown device types.
+- [ ] Plan how JUCE `AudioDeviceManager` is used for enumeration.
+- [ ] Decide whether the first visible output is shown in a minimal UI surface, logs, or both.
+- [ ] Ensure enumeration work is described as control-path work rather than callback work.
+- [ ] Document the distinction between input, output, duplex, and unknown device types.
 
 Acceptance criteria:
 
@@ -80,10 +80,10 @@ Date: 2026-07-03
 
 Tasks:
 
-- Plan the first example diagnostics output.
-- Define the minimum evidence fields to save: OS, audio interface, default input, and default output.
-- Plan the evidence drop location under `docs/evidence/`.
-- Record that platform-specific fields may be placed in an extension area while the minimal cross-platform field set stays stable.
+- [ ] Plan the first example diagnostics output.
+- [ ] Define the minimum evidence fields to save: OS, audio interface, default input, and default output.
+- [ ] Plan the evidence drop location under `docs/evidence/`.
+- [ ] Record that platform-specific fields may be placed in an extension area while the minimal cross-platform field set stays stable.
 
 Acceptance criteria:
 
@@ -97,10 +97,10 @@ Date: 2026-07-04
 
 Tasks:
 
-- Review the Week 2 acceptance criteria.
-- Confirm the week closes on enumeration visibility, input/output distinction, no Python dependency, and no real-time callback misuse.
-- Record which verification items require a real Windows environment.
-- Prepare the Week 3 entry point: Profile schema and diagnostics output compatibility.
+- [ ] Review the Week 2 acceptance criteria.
+- [ ] Confirm the week closes on enumeration visibility, input/output distinction, no Python dependency, and no real-time callback misuse.
+- [ ] Record which verification items require a real Windows environment.
+- [ ] Prepare the Week 3 entry point: Profile schema and diagnostics output compatibility.
 
 Acceptance criteria:
 

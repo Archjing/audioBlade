@@ -29,10 +29,10 @@ Date: 2026-07-14
 
 Tasks:
 
-- Confirm the Week 4 scope against `docs/Plan/phase0-foundation-plan.md`.
-- Restate the required closeout artifacts: verification report, evidence, command list, next-phase recommendation, and known risks.
-- Fix the boundary that Week 4 integrates prior work instead of adding new product scope.
-- Reconfirm excluded claims: virtual drivers, first-party drivers, AirPlay, and real routing.
+- [ ] Confirm the Week 4 scope against `docs/Plan/phase0-foundation-plan.md`.
+- [ ] Restate the required closeout artifacts: verification report, evidence, command list, next-phase recommendation, and known risks.
+- [ ] Fix the boundary that Week 4 integrates prior work instead of adding new product scope.
+- [ ] Reconfirm excluded claims: virtual drivers, first-party drivers, AirPlay, and real routing.
 
 Acceptance criteria:
 
@@ -46,10 +46,10 @@ Date: 2026-07-15
 
 Tasks:
 
-- Plan the structure of `docs/Plan/phase0-verification-report.md`.
-- Gather the evidence categories that must be present: command evidence, output summary, and `not_run` items.
-- Align Week 4 closeout with the minimum definition of done from the canonical plan.
-- Confirm that diagnostics evidence and schema evidence are both represented.
+- [ ] Plan the structure of `docs/Plan/phase0-verification-report.md`.
+- [ ] Gather the evidence categories that must be present: command evidence, output summary, and `not_run` items.
+- [ ] Align Week 4 closeout with the minimum definition of done from the canonical plan.
+- [ ] Confirm that diagnostics evidence and schema evidence are both represented.
 
 Acceptance criteria:
 
@@ -63,10 +63,10 @@ Date: 2026-07-16
 
 Tasks:
 
-- Consolidate the canonical build and diagnostics commands for Phase 0 closeout.
-- Define how output summaries should be recorded.
-- Record which checks can run in WSL/Linux and which require a real Windows environment.
-- Ensure `not_run` handling is part of the report plan rather than omitted.
+- [ ] Consolidate the canonical build and diagnostics commands for Phase 0 closeout.
+- [ ] Define how output summaries should be recorded.
+- [ ] Record which checks can run in WSL/Linux and which require a real Windows environment.
+- [ ] Ensure `not_run` handling is part of the report plan rather than omitted.
 
 Acceptance criteria:
 
@@ -80,10 +80,10 @@ Date: 2026-07-17
 
 Tasks:
 
-- Consolidate the known risks list from Weeks 1 to 4.
-- Record the allowed limitation language for missing real Windows evidence.
-- Confirm the next phase recommendation: a Windows local stereo route prototype.
-- Ensure the next phase entry is framed as the next step rather than Phase 0 completion scope.
+- [ ] Consolidate the known risks list from Weeks 1 to 4.
+- [ ] Record the allowed limitation language for missing real Windows evidence.
+- [ ] Confirm the next phase recommendation: a Windows local stereo route prototype.
+- [ ] Ensure the next phase entry is framed as the next step rather than Phase 0 completion scope.
 
 Acceptance criteria:
 
@@ -97,10 +97,10 @@ Date: 2026-07-18
 
 Tasks:
 
-- Perform the final scope check against `AGENTS.md`, `docs/Harness/agents.md`, and `docs/cn/长期开发计划.md` as required by the canonical Week 4 plan.
-- Confirm the repository docs allow a new developer to configure, build, and run diagnostics from documentation.
-- Confirm the final closeout does not state or imply virtual drivers, real routing, or AirPlay support.
-- Record any remaining blockers as `fail` or `not_run`.
+- [ ] Perform the final scope check against `AGENTS.md`, `docs/Harness/agents.md`, and `docs/cn/长期开发计划.md` as required by the canonical Week 4 plan.
+- [ ] Confirm the repository docs allow a new developer to configure, build, and run diagnostics from documentation.
+- [ ] Confirm the final closeout does not state or imply virtual drivers, real routing, or AirPlay support.
+- [ ] Record any remaining blockers as `fail` or `not_run`.
 
 Acceptance criteria:
 

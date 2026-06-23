@@ -29,10 +29,10 @@ Date: 2026-07-07
 
 Tasks:
 
-- Confirm the Week 3 scope against `docs/Plan/phase0-foundation-plan.md`.
-- Restate the Week 3 deliverables: schema, example profile, diagnostics entry point, and ADR.
-- Fix the v0 boundary around stereo routes and serialization only.
-- Record explicit non-goals for real routing, virtual endpoints, and multichannel expansion.
+- [ ] Confirm the Week 3 scope against `docs/Plan/phase0-foundation-plan.md`.
+- [ ] Restate the Week 3 deliverables: schema, example profile, diagnostics entry point, and ADR.
+- [ ] Fix the v0 boundary around stereo routes and serialization only.
+- [ ] Record explicit non-goals for real routing, virtual endpoints, and multichannel expansion.
 
 Acceptance criteria:
 
@@ -46,10 +46,10 @@ Date: 2026-07-08
 
 Tasks:
 
-- Define the minimal JSON representations for `AudioNode`, `Port`, `Route`, and `Profile`.
-- Plan how one stereo route is represented.
-- Plan fields for source, destination, gain, mute, and `sampleRatePolicy`.
-- Reserve fields for stable device IDs and human-readable fallback matching.
+- [ ] Define the minimal JSON representations for `AudioNode`, `Port`, `Route`, and `Profile`.
+- [ ] Plan how one stereo route is represented.
+- [ ] Plan fields for source, destination, gain, mute, and `sampleRatePolicy`.
+- [ ] Reserve fields for stable device IDs and human-readable fallback matching.
 
 Acceptance criteria:
 
@@ -63,10 +63,10 @@ Date: 2026-07-09
 
 Tasks:
 
-- Align Week 3 schema planning with Week 2 device enumeration output.
-- Describe how diagnostics fields can reference future Profile device entries.
-- Plan the evidence items needed for `docs/Plan/phase0-verification-report.md`.
-- Ensure diagnostics compatibility is recorded without claiming real routing behavior.
+- [ ] Align Week 3 schema planning with Week 2 device enumeration output.
+- [ ] Describe how diagnostics fields can reference future Profile device entries.
+- [ ] Plan the evidence items needed for `docs/Plan/phase0-verification-report.md`.
+- [ ] Ensure diagnostics compatibility is recorded without claiming real routing behavior.
 
 Acceptance criteria:
 
@@ -80,10 +80,10 @@ Date: 2026-07-10
 
 Tasks:
 
-- List the canonical Week 3 verification commands.
-- Record the optional schema validation path if a validation tool is introduced later.
-- Define output summary expectations and `not_run` classification rules for schema-related checks.
-- Confirm that schema validation is distinct from route execution.
+- [ ] List the canonical Week 3 verification commands.
+- [ ] Record the optional schema validation path if a validation tool is introduced later.
+- [ ] Define output summary expectations and `not_run` classification rules for schema-related checks.
+- [ ] Confirm that schema validation is distinct from route execution.
 
 Acceptance criteria:
 
@@ -97,10 +97,10 @@ Date: 2026-07-11
 
 Tasks:
 
-- Review the Week 3 acceptance criteria.
-- Confirm the schema can represent future virtual-input-to-physical-output and physical-input-to-virtual-output routes as serializable models only.
-- Record the Phase 0 risk list for schema creep.
-- Prepare the Week 4 entry point: integration, verification, and next-phase recommendation.
+- [ ] Review the Week 3 acceptance criteria.
+- [ ] Confirm the schema can represent future virtual-input-to-physical-output and physical-input-to-virtual-output routes as serializable models only.
+- [ ] Record the Phase 0 risk list for schema creep.
+- [ ] Prepare the Week 4 entry point: integration, verification, and next-phase recommendation.
 
 Acceptance criteria:
 
