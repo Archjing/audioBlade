@@ -29,10 +29,10 @@ Date: 2026-07-07
 
 Tasks:
 
-- [ ] Confirm the Week 3 scope against `docs/Plan/phase0-foundation-plan.md`.
-- [ ] Restate the Week 3 deliverables: schema, example profile, diagnostics entry point, and ADR.
-- [ ] Fix the v0 boundary around stereo routes and serialization only.
-- [ ] Record explicit non-goals for real routing, virtual endpoints, and multichannel expansion.
+- [x] Confirm the Week 3 scope against `docs/Plan/phase0-foundation-plan.md`.
+- [x] Restate the Week 3 deliverables: schema, example profile, diagnostics entry point, and ADR.
+- [x] Fix the v0 boundary around stereo routes and serialization only.
+- [x] Record explicit non-goals for real routing, virtual endpoints, and multichannel expansion.
 
 Acceptance criteria:
 
