@@ -4,6 +4,23 @@
 
 namespace audio_blade::devices
 {
+const char* toString(const AudioDeviceDirection direction)
+{
+    switch (direction)
+    {
+        case AudioDeviceDirection::input:
+            return "input";
+        case AudioDeviceDirection::output:
+            return "output";
+        case AudioDeviceDirection::duplex:
+            return "duplex";
+        case AudioDeviceDirection::unknown:
+            return "unknown";
+    }
+
+    return "unknown";
+}
+
 namespace
 {
 

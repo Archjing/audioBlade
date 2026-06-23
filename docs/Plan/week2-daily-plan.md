@@ -63,10 +63,10 @@ Date: 2026-07-02
 
 Tasks:
 
-- [ ] Plan how JUCE `AudioDeviceManager` is used for enumeration.
-- [ ] Decide whether the first visible output is shown in a minimal UI surface, logs, or both.
-- [ ] Ensure enumeration work is described as control-path work rather than callback work.
-- [ ] Document the distinction between input, output, duplex, and unknown device types.
+- [x] Plan how JUCE `AudioDeviceManager` is used for enumeration.
+- [x] Decide whether the first visible output is shown in a minimal UI surface, logs, or both.
+- [x] Ensure enumeration work is described as control-path work rather than callback work.
+- [x] Document the distinction between input, output, duplex, and unknown device types.
 
 Acceptance criteria:
 

@@ -15,6 +15,8 @@ enum class AudioDeviceDirection
     unknown
 };
 
+[[nodiscard]] const char* toString(AudioDeviceDirection direction);
+
 struct AudioDeviceInfo
 {
     std::string name;
